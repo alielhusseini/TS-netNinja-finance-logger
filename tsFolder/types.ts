@@ -4,7 +4,7 @@ let isFalsy: boolean;
 let mixedArr: (string|number)[] = [];
 let mixedObj: { name: string, age: number, collectibles: any[] };
 
-// here we are creating interfaces to use them as types for the params & returns
+// here we are creating interfaces to use them as types for the params & returns for the functions
 interface CalcAreaOrVolumeFunc {
     (width : number, length : number, height? : number) : number | string
 };
