@@ -1,2 +1,3 @@
 tsc filePathFromTheRoot.ts -w ----> will compile your code into js with a watch event
 we create a new folder 'src' & we place our ts files there, thus for proper compile we type from the root tsc --init ----> we need to change our rootDir & outDir in the tsconfig.json ----> now we only type tsc -w in the terminal & our ts files we'll be turned to js in the outDir (public)
+to use the module system we need to change the "module": "ES2015" in tsconfig.json & add the type="module" in <src> of index.html
