@@ -1,4 +1,4 @@
-// if we have multiple obj of same structures, we can simply make an interface of a needed structure to follow
+// if we have multiple obj of same structures, we can simply make an interface of a needed structure to follow (interface defies how an obj should look)
 interface isPerson {
     name : string;
     age : number;

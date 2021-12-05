@@ -14,9 +14,13 @@ const list = new ListTemplate(ul);
 form.addEventListener('submit', (e : Event) => {
     e.preventDefault()
     let doc : HasFormatter; // this is an object that implements this interface
+    
+    // if we did the spread operator without assigning it as a tuple, it would throw an error since when spreading there is no specific order of the element types whereas with the params inside the classes each contructor has a specific type ---> order is important, therefore we create a tuple
+    let values : [string, string, number]
+    values = [tofrom.value, details.value, amount.valueAsNumber]
 
-    if (type.value === 'invoice') doc = new Invoice(tofrom.value, details.value, amount.valueAsNumber)
-    else doc = new Payment(tofrom.value, details.value, amount.valueAsNumber)
+    if (type.value === 'invoice') doc = new Invoice(...values)
+    else doc = new Payment(...values)
     
     list.render(doc, type.value , 'end')
 
