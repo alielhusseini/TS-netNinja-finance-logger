@@ -1,2 +1,2 @@
 tsc filePathFromTheRoot.ts -w ----> will compile your code into js with a watch event
-we create a new folder 'src' & we place our ts files there, thus for proper compile we type from the root tsc --init ----> we need to change our rootDir & outDir in the tsconfig.json ----> now we only type tsc in the terminal & our ts files we'll be turned to js in the outDir (public)
+we create a new folder 'src' & we place our ts files there, thus for proper compile we type from the root tsc --init ----> we need to change our rootDir & outDir in the tsconfig.json ----> now we only type tsc -w in the terminal & our ts files we'll be turned to js in the outDir (public)
