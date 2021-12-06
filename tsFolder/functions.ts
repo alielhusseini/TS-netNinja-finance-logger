@@ -6,8 +6,10 @@ interface CalcAreaOrVolumeFunc {
 
 let calcCircum : CalcCircum = (diameter) => diameter * Math.PI;
 let calcAreaOrVolume : CalcAreaOrVolumeFunc = (width, length, height) => { // here the height parameter is optional
-    if (height) return width * length * height
-    else if (height === 0) return `no volume for this shape, only an area of ${width * length} unitSqr`
+    if (height) {
+        if (height === 0) return `no volume for this shape, only an area of ${width * length} unitSqr`
+        else return width * length * height
+    }
     else return width * length
 };
 
@@ -16,7 +18,7 @@ const calcSum = (a : number, b? : number) : number => {
     if (b) return a + b
     return a
 };
-const calcSub = (a: number, b : number = 0) : number => a - b; // here we gave b default value of zero, we shouldn't assign it as b? : number anymore since it can't be undefined
+const calcSub = (a : number, b : number = 0) : number => a - b; // here we gave b default value of zero, we shouldn't assign it as b? : number anymore since it can't be undefined
 
 // now we can write the function calcAreaOrVolume as:
 let calcAreaOrVolume2 = (width : number, length : number, height : number = 1) : number | string => {
